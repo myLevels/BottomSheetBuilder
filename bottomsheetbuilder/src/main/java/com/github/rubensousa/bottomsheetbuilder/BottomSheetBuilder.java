@@ -162,6 +162,12 @@ public class BottomSheetBuilder {
         mAdapterBuilder.addItem(id, title, icon, color, mItemBackground, mIconTintColor);
         return this;
     }
+    
+    public BottomSheetBuilder addItem(int id, String title, @ColorInt int color, Boolean check) {
+        // add the check just to make the function different
+        mAdapterBuilder.addItem(id, title, null, color, mItemBackground, mIconTintColor);
+        return this;
+    }
 
     public BottomSheetBuilder setItemTextColor(@ColorInt int color) {
         mItemTextColor = color;
